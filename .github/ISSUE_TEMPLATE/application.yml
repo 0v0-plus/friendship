@@ -1,0 +1,78 @@
+name: 友链申请
+description: 提交友链申请
+title: "友链申请"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        申请友链的小伙伴你好，感谢对本网站的抬爱。请仔细填写以下内容并等待回复 ^_^ ，承诺所有申请都会予以回应
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 请确保已阅读如下注意事项
+      description: 保证遵守以下事项并在选项前打勾
+      options:
+        - label: "已知晓: 申请友链的网站内容必须符合中国法律规定"
+          required: true
+        - label: "已知晓: 申请须按照模板格式填写，且关于文章内容的讨论应到 `Discussion` 版块进行交流"
+          required: true
+        - label: "已知晓: `issue` 只用于处理新申请的网站；已经加入友链的网站，如果信息发生改变，应在原 `issue` 中进行评论更新信息"
+          required: true
+        - label: "已知晓: 不应在他人网站的友链申请下评论，防止造成不必要的打扰"
+          required: true
+        - label: "已知晓: 如果超过 `24` 小时站长未回复，才可以 `@` 以示提醒"
+          required: true
+  - type: dropdown
+    id: beian
+    attributes:
+      label: 网站是否已备案
+      description: 未备案的网站会更加谨慎考虑，但不会以未备案为由拒绝
+      options:
+        - 已备案
+        - 未备案
+    validations:
+      required: true
+  - type: input
+    id: sitename
+    attributes:
+      label: 网站名称
+      description: 请填写你的网站名称
+      placeholder: "如: 梦开始的地方"
+    validations:
+      required: true
+  - type: input
+    id: sitelink
+    attributes:
+      label: 网站链接
+      description: 请填写你的完整网站链接
+      placeholder: "如: https://www.moerealm.com"
+    validations:
+      required: true
+  - type: input
+    id: siteavatar
+    attributes:
+      label: 头像链接
+      description: 请填写你的头像链接，本站展示友链会直接引用你的头像地址，因此请确保本站在该链接的防盗链白名单内
+      placeholder: "如: https://www.moerealm.com/assets/avatar.png"
+    validations:
+      required: true
+  - type: input
+    id: siteintroduction
+    attributes:
+      label: 网站简介
+      description: 请填写你的网站简介，30字以内简短的一句话即可，会展示在友链中
+      placeholder: "如: Luke Wang 的个人记录与分享小站"
+    validations:
+      required: true
+  - type: textarea
+    id: sitecontent
+    attributes:
+      label: 站点内容
+      description: 简要介绍一下你的网站主要内容
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: 其它
+      description: 如果你有想补充的内容可以写在这里
